@@ -6,6 +6,6 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(_movementDirection, Space.Self);
+        transform.Translate(_movementDirection, Space.World);
     }
 }
