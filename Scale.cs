@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Scale : MonoBehaviour
 {
-    [SerializeField] private float _speed;
+    [SerializeField] private float _speedIncrease;
 
-    void Update()
+    private void Update()
     {
         var scale = transform.localScale;
-        transform.localScale += scale * _speed;
+        transform.localScale += scale * _speedIncrease;
     }
 }
