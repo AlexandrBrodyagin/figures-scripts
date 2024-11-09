@@ -3,9 +3,17 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private Vector3 _movementDirection;
+    [SerializeField] private bool isLocal;
 
-    void Update()
+    private void Update()
     {
-        transform.Translate(_movementDirection, Space.World);
+        if (isLocal == false)
+        {
+            transform.Translate(_movementDirection, Space.World);
+        }
+        else
+        {
+            transform.Translate(_movementDirection, Space.Self);
+        }
     }
 }
